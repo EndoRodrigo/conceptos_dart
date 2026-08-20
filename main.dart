@@ -15,7 +15,7 @@ bool? isAlive = null;
 
 //Variables de tiposlistas
 final List<String> abilidades = ['Impostor'];
-final sprites = <String> ['diito/front.png','ditto/backed.png']; 
+final sprites = <String>['diito/front.png', 'ditto/backed.png'];
 
 //Variables tipo dymanic
 dynamic errorMessage = 'hola';
@@ -25,8 +25,22 @@ errorMessage = {1,2,3,4,5,6};
 errorMessage () => true;
 errorMessage = null;*/
 
+//Varibles tipo map
+final poke = {'name': 'Ditto', 'hp': '100'};
+
+final Map<String, dynamic> pokemon = {
+  'name': 'Ditto',
+  'hp': '100',
+  'isAlive': true,
+  'abilidades': <String>['Impostir'],
+  'Sprites': {1: 'ditto/front.png', 2: 'ditto/bronk.png'},
+};
+
 //Metodo principal de la ejecucucion
-void main(){
-    print(name + lasname);
-    print(name.toLowerCase());
+void main() {
+  print(name + lasname);
+  print(name.toLowerCase());
+  print(pokemon);
+  print(pokemon['name']);
+  print(pokemon['Sprites'][1]);
 }
