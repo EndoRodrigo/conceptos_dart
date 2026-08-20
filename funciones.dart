@@ -16,11 +16,16 @@ int pasarParametrosOptional (int a , [int b = 0]){
   return a + b;
 }
 
+String funcionPamaeterOptional({required String name, String message = 'Hola, '}){
+  return ' ${message} - $name';
+}
+
 
 void main() {
   print(greenEvergane());
   print(funcionFlecha());
   print(pasarParametros(1, 3));
   print(pasarParametrosOptional(9));
+  print(funcionPamaeterOptional(name: 'Endo'));
 }
 
