@@ -17,8 +17,13 @@ bool? isAlive = null;
 final List<String> abilidades = ['Impostor'];
 final sprites = <String> ['diito/front.png','ditto/backed.png']; 
 
-
-
+//Variables tipo dymanic
+dynamic errorMessage = 'hola';
+/*errorMessage = true;
+errorMessage = [1,2,3,4,5,6];
+errorMessage = {1,2,3,4,5,6};
+errorMessage () => true;
+errorMessage = null;*/
 
 //Metodo principal de la ejecucucion
 void main(){
