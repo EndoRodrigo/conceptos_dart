@@ -2,7 +2,7 @@ class GetSet {
 
 double _side;
 
-GetSet({required this._side});
+GetSet({required this._side}):assert(_side>=0, 'El tamaño del side esnegativo');
 
 double calcularArea(){
   return _side * _side;
@@ -22,7 +22,7 @@ set side(double value){
 
 
 void main(List<String> args) {
-  final mysquare = GetSet(side: 10);
+  final mysquare = GetSet(side: -10);
   mysquare.side = -10;
   print(mysquare.area);
   
