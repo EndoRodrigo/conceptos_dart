@@ -2,7 +2,7 @@ enum PlantType { nuclear, win, water }
 
 abstract class ClasesAbstracta {
   double energyLeft;
-  String type;
+  PlantType type;
 
   ClasesAbstracta({required this.energyLeft, required this.type});
   void consumerEnegy(double amount);
@@ -21,10 +21,10 @@ class WinPlant extends ClasesAbstracta {
 class NuclearCllas implements ClasesAbstracta{
 
  @override
-  double energyLeft;
+  late double energyLeft;
   
    @override
-  String type = PlantType.nuclear;
+  PlantType type = PlantType.nuclear;
 
 
   @override
@@ -36,7 +36,7 @@ class NuclearCllas implements ClasesAbstracta{
 
 void main(List<String> args) {
 
-  final plant = WinPlant(energyLeft: 100, type: PlantType.win.toString());
+  final plant = WinPlant(energyLeft: 100, type: PlantType.win);
   print(plant.energyLeft);
   print(plant.type);
   print(plant);
